@@ -10,12 +10,18 @@
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 8rem;
+    --header-height: 80px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -47,6 +53,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
+    height: var(--header-height);
 }
 
 .logo {
@@ -105,37 +112,10 @@ body {
 .floating-product {
     width: 280px;
     height: 500px;
-    background: linear-gradient(180deg, #fce8f3 0%, #f8e5e5 50%, #ffd4e5 100%);
-    border-radius: 120px;
+    object-fit: contain;
     position: relative;
-    box-shadow: 
-        0 50px 100px -20px rgba(199, 51, 51, 0.15),
-        0 30px 60px -30px rgba(199, 51, 51, 0.2);
+    filter: drop-shadow(18px 30px 20px rgba(77, 27, 26, 0.16));
     animation: float 6s ease-in-out infinite;
-}
-
-.floating-product::before {
-    content: 'HIBISCUS FIZZ';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    color: var(--color-red);
-    opacity: 0.6;
-}
-
-.floating-product::after {
-    content: '12 FL OZ';
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.625rem;
-    letter-spacing: 2px;
-    color: var(--color-gray);
-    opacity: 0.5;
 }
 
 @keyframes float {
@@ -216,6 +196,10 @@ body {
     line-height: 1.1;
     letter-spacing: -2px;
     max-width: 900px;
+}
+
+.hero-title-accent {
+    color: #b62632;
 }
 
 .hero-description {
@@ -344,6 +328,7 @@ body {
 .ingredient-card {
     padding: 0;
     background: transparent;
+    min-width: 0;
 }
 
 .ingredient-card:hover {
@@ -364,6 +349,26 @@ body {
     margin-bottom: var(--spacing-sm);
     color: var(--color-black);
     letter-spacing: -0.5px;
+}
+
+.ingredient-image-frame {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+}
+
+.ingredient-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.ingredient-image-stream {
+    object-fit: cover;
+    object-position: center;
 }
 
 .ingredient-card p {
@@ -711,5 +716,151 @@ body {
 
     .story-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Photographs occupy the original placeholder dimensions. */
+img.image-placeholder {
+    height: auto;
+    object-fit: cover;
+}
+.image-caption a {
+    color: inherit;
+}
+
+.photo-credits {
+    margin-top: var(--spacing-sm);
+    font-size: 0.75rem;
+}
+
+.photo-credits summary {
+    cursor: pointer;
+}
+
+.photo-credits ul {
+    padding-left: 1.25rem;
+    margin: var(--spacing-sm) 0;
+}
+
+.photo-credits a {
+    color: inherit;
+}
+
+/* Native snapping keeps wheel, touch, keyboard, and anchor navigation in sync.
+   Smooth-scroll deceleration is controlled by the browser, not a JS tween. */
+main > section[class] {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin-top: 0;
+    padding: calc(var(--header-height) + 2rem) 0 2rem;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+main > section > .container {
+    width: 100%;
+    min-width: 0;
+}
+
+.hero-grid,
+.story-grid {
+    gap: clamp(2rem, 6vw, 8rem);
+}
+
+.hero-image {
+    height: clamp(300px, 65dvh, 600px);
+}
+
+.floating-product {
+    max-width: 100%;
+    max-height: calc(100% - 40px);
+}
+
+.story-grid {
+    align-items: center;
+}
+
+.story-section .section-title {
+    margin-bottom: clamp(2rem, 5dvh, 4rem);
+}
+
+.story-image .image-placeholder {
+    max-height: min(60dvh, 600px);
+}
+
+.newsletter-form input {
+    min-width: 0;
+}
+
+.newsletter-form-large button {
+    padding-inline: 2rem;
+}
+
+.footer {
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+}
+
+@media (max-width: 1024px) {
+    .hero-grid,
+    .story-grid {
+        gap: 2rem;
+    }
+
+    .hero-image {
+        height: clamp(200px, 30dvh, 350px);
+    }
+
+    .story-content {
+        padding-right: 0;
+    }
+
+    .story-image .image-placeholder {
+        height: clamp(160px, 25dvh, 300px);
+        aspect-ratio: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    main > section[class] {
+        padding-top: calc(var(--header-height) + 1.5rem);
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle,
+    .hero-title,
+    .hero-description,
+    .hero-feature {
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-grid,
+    .story-grid {
+        gap: 1.5rem;
+    }
+
+    .hero-image {
+        height: clamp(180px, 28dvh, 300px);
+    }
+
+    .story-image .image-placeholder {
+        height: clamp(140px, 22dvh, 240px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        scroll-snap-type: y proximity;
+    }
+
+    .floating-product {
+        animation: none;
     }
 }
