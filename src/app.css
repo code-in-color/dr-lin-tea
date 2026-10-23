@@ -582,6 +582,7 @@ body {
 }
 
 .footer-section p,
+.footer-section span,
 .footer-section a {
     color: var(--color-gray);
     text-decoration: none;

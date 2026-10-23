@@ -3,3 +3,8 @@ node_modules
 .vercel
 *.log
 .idea/
+.svelte-kit/
+build/
+.env
+.env.*
+!.env.example

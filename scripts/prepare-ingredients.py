@@ -10,7 +10,8 @@ from PIL import Image
 from rembg import new_session, remove
 
 
-ASSETS = Path(__file__).resolve().parent.parent / 'assets'
+ROOT = Path(__file__).resolve().parent.parent
+ASSETS = ROOT / 'static/assets'
 
 
 def save_cutout(image, name):
@@ -49,7 +50,7 @@ for name in ('green-tea', 'blue-lotus'):
     save_cutout(cutout, name)
 
 # Preserve the supplied whole dried hibiscus and bowl, removing the white backdrop.
-image = Image.open(ASSETS.parent / 'HRB-HIBS.jpg').convert('RGBA')
+image = Image.open(ROOT / 'HRB-HIBS.jpg').convert('RGBA')
 save_cutout(remove(image, session=session), 'hibiscus-whole')
 
 # A stream is an environmental photograph rather than an isolated object.
