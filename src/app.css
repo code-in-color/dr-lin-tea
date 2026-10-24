@@ -835,7 +835,18 @@ main > section > .container {
     }
 
     .hero-image {
-        height: clamp(200px, 30dvh, 350px);
+        --hero-stage-height: clamp(200px, 30vh, 350px);
+        --hero-stage-height: clamp(200px, 30svh, 350px);
+        height: var(--hero-stage-height);
+    }
+
+    .floating-product {
+        /* Reserve the final size before decoding or hydration. Avoid a
+           percentage max-height that depends on the flex parent's layout. */
+        height: calc(var(--hero-stage-height) - 40px);
+        width: calc((var(--hero-stage-height) - 40px) * 665 / 1310);
+        max-height: none;
+        flex: none;
     }
 
     .story-content {
@@ -881,7 +892,8 @@ main > section > .container {
     }
 
     .hero-image {
-        height: clamp(180px, 28dvh, 300px);
+        --hero-stage-height: clamp(180px, 28vh, 300px);
+        --hero-stage-height: clamp(180px, 28svh, 300px);
     }
 
     .floating-product {
