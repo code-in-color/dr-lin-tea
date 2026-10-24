@@ -223,9 +223,9 @@ body {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background: var(--color-white);
-    border: 1px solid var(--color-black);
+    border: 2px solid var(--color-black);
     color: var(--color-black);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.6875rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -810,6 +810,30 @@ main > section > .container {
         gap: 2rem;
     }
 
+    .hero-content {
+        display: contents;
+    }
+
+    .hero-copy {
+        min-width: 0;
+    }
+
+    .hero-content > .hero-feature {
+        order: 2;
+        margin-bottom: 0;
+    }
+
+    .hero-grid > .hero-image {
+        order: 1;
+    }
+
+    .hero-badge {
+        order: 3;
+        justify-self: center;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+
     .hero-image {
         height: clamp(200px, 30dvh, 350px);
     }
@@ -834,6 +858,12 @@ main > section > .container {
         font-size: 3rem;
     }
 
+    .hero-badge {
+        padding-inline: 0.5rem;
+        font-size: clamp(0.5rem, 2.1vw, 0.6875rem);
+        letter-spacing: 0.15px;
+    }
+
     .hero-subtitle,
     .hero-title,
     .hero-description,
@@ -848,6 +878,10 @@ main > section > .container {
 
     .hero-image {
         height: clamp(180px, 28dvh, 300px);
+    }
+
+    .floating-product {
+        scale: 1.2;
     }
 
     .story-image .image-placeholder {
