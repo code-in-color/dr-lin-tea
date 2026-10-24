@@ -223,9 +223,9 @@ body {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background: var(--color-white);
-    border: 2px solid var(--color-black);
+    border: 1px solid var(--color-black);
     color: var(--color-black);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.6875rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -860,6 +860,10 @@ main > section > .container {
 
     .hero-badge {
         padding-inline: 0.5rem;
+        border-width: 2px;
+        font-weight: 500;
+        color: #444;
+        border-color: #666;
         font-size: clamp(0.5rem, 2.1vw, 0.6875rem);
         letter-spacing: 0.15px;
     }

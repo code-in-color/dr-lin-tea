@@ -1,5 +1,6 @@
 <script lang="ts">
   import {onDestroy} from 'svelte';
+  import { siteUrl, socialImage } from '../lib/site';
 
   let email = $state('');
   let status = $state<'idle' | 'subscribing' | 'subscribed'>('idle');
@@ -29,6 +30,23 @@
 
 <svelte:head>
     <title>Dr. Lin Tea - Sparkling Botanical Tea</title>
+    <meta name="description" content="Meet Ruby Fizz: a crisp sparkling tea with tart hibiscus, premium loose-leaf tea, and minimal ingredients.">
+    <link rel="canonical" href={siteUrl}>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dr. Lin Tea">
+    <meta property="og:title" content="Ruby Fizz — Dr. Lin Tea">
+    <meta property="og:description" content="Tart hibiscus. Real tea. A little sparkle. Meet Ruby Fizz.">
+    <meta property="og:url" content={siteUrl}>
+    <meta property="og:image" content={socialImage}>
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dr. Lin Tea Ruby Fizz can with red hibiscus artwork on a warm white background">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ruby Fizz — Dr. Lin Tea">
+    <meta name="twitter:description" content="Tart hibiscus. Real tea. A little sparkle. Meet Ruby Fizz.">
+    <meta name="twitter:image" content={socialImage}>
+    <meta name="twitter:image:alt" content="Dr. Lin Tea Ruby Fizz sparkling tea can">
 </svelte:head>
 <header class="header">
     <div class="container">

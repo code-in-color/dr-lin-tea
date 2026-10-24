@@ -39,3 +39,11 @@ The package manager is pinned in `package.json`. Vercel installs with `pnpm inst
 The ingredient and gallery markup remains commented out, matching the current page. The newsletter retains its original demo behavior and is not connected to an email provider.
 
 Scrolling uses CSS scroll snapping and native smooth scrolling with reduced-motion support. Sections can grow beyond the viewport when necessary to keep their content accessible.
+
+## Link previews
+
+Open Graph and Twitter metadata select `static/assets/ruby-fizz-social.jpg`, a 1200 × 630 can-focused image, for shared links (including iMessage).
+
+The public URL defaults to `https://code-in-color.github.io/dr-lin-tea`. When moving to a custom domain, set `PUBLIC_SITE_URL` in the build environment (or copy `.env` to `.env` and update it) and rebuild. Include the project path for GitHub Pages, and use the domain root for a custom domain. This setting controls preview/canonical URLs, not the deployment base path.
+
+Regenerate the preview with `python3 scripts/prepare-social.py` (requires Pillow). Messaging apps may cache previews for previously shared URLs.
