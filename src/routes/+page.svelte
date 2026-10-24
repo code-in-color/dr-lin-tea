@@ -1,15 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script lang="ts">
+    import { onDestroy } from 'svelte';
+
+    let email = $state('');
+    let status = $state<'idle' | 'subscribing' | 'subscribed'>('idle');
+    let subscribeTimer: ReturnType<typeof setTimeout>;
+    let resetTimer: ReturnType<typeof setTimeout>;
+
+    // Preserve the existing demo until an email provider is connected.
+    function subscribe(event: SubmitEvent) {
+        event.preventDefault();
+        if (status !== 'idle') return;
+
+        status = 'subscribing';
+        subscribeTimer = setTimeout(() => {
+            status = 'subscribed';
+            email = '';
+            resetTimer = setTimeout(() => {
+                status = 'idle';
+            }, 3000);
+        }, 1000);
+    }
+
+    onDestroy(() => {
+        clearTimeout(subscribeTimer);
+        clearTimeout(resetTimer);
+    });
+</script>
+
+<svelte:head>
     <title>Dr. Lin Tea - Sparkling Botanical Tea</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+</svelte:head>
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -136,7 +156,7 @@
                         </p>
                     </div>
                     <div class="story-image">
-                        <img class="image-placeholder" src="assets/tea.jpg" width="1333" height="2000" loading="lazy" decoding="async">
+                        <img class="image-placeholder" src="assets/tea.jpg" alt="Loose-leaf teas and dried botanicals in glass jars" width="1333" height="2000" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -147,9 +167,11 @@
                 <div class="final-cta-content">
                     <h2>Be the First to Try It</h2>
                     <p>Join our community and get notified when Hibiscus Fizz launches.</p>
-                    <form class="newsletter-form newsletter-form-large" id="newsletterForm">
-                        <input type="email" name="email" aria-label="Email address" autocomplete="email" placeholder="your@email.com" required>
-                        <button type="submit">Get Launch Updates</button>
+                    <form class="newsletter-form newsletter-form-large" id="newsletterForm" onsubmit={subscribe} aria-busy={status === 'subscribing'}>
+                        <input type="email" name="email" aria-label="Email address" autocomplete="email" placeholder="your@email.com" bind:value={email} required>
+                        <button type="submit" disabled={status !== 'idle'} aria-live="polite">
+                            {status === 'subscribing' ? 'Subscribing...' : status === 'subscribed' ? 'Subscribed' : 'Get Launch Updates'}
+                        </button>
                     </form>
                 </div>
             </div>
@@ -179,13 +201,9 @@
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
+                         <li><span>Instagram</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-
-    <script src="scripts/main.js"></script>
-</body>
-</html>

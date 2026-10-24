@@ -1,4 +1,8 @@
 {
+  "framework": "sveltekit",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "build",
   "cleanUrls": true,
   "trailingSlash": false
 }
