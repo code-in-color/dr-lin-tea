@@ -47,11 +47,11 @@
                         <p class="hero-subtitle">Sparkling Botanical Tea</p>
                         <h1 class="hero-title">Ruby <span class="hero-title-accent">Fizz</span></h1>
                         <p class="hero-description">
-                            Tart hibiscus, premium loose-leaf tea, and blue lotus flower come together in a crisp sparkling tea
+                            Tart hibiscus and premium loose-leaf tea come together in a crisp sparkling tea
                             with a naturally vibrant, fruit-forward character.
                         </p>
                         <p class="hero-feature">
-                            Made with minimal ingredients and lightly sweetened with turbinado sugar,
+                            Made with minimal ingredients and sweetened with raw turbinado,
                             Ruby Fizz offers a refreshing alternative to soda that is cleaner and intentionally crafted.
                         </p>
                         <div class="hero-badge">
