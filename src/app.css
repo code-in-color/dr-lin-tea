@@ -251,50 +251,6 @@ body {
     line-height: 1.2;
 }
 
-.newsletter-form {
-    display: flex;
-    gap: 0;
-    max-width: 500px;
-}
-
-.newsletter-form input {
-    flex: 1;
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-black);
-    border-right: none;
-    background: var(--color-white);
-    color: var(--color-black);
-    font-size: 0.875rem;
-    font-family: 'Inter', sans-serif;
-}
-
-.newsletter-form input::placeholder {
-    color: var(--color-gray);
-    font-weight: 300;
-}
-
-.newsletter-form input:focus {
-    outline: none;
-    border-color: var(--color-black);
-}
-
-.newsletter-form button {
-    padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--color-black);
-    color: var(--color-white);
-    border: 1px solid var(--color-black);
-    font-size: 0.75rem;
-    font-weight: 400;
-    cursor: pointer;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.newsletter-form button:hover {
-    background: var(--color-white);
-    color: var(--color-black);
-}
-
 .section-title {
     font-size: 3rem;
     font-weight: 300;
@@ -428,20 +384,6 @@ body {
     max-width: 700px;
 }
 
-.newsletter-form-large {
-    max-width: 600px;
-    margin-top: var(--spacing-lg);
-}
-
-.newsletter-form-large input {
-    padding: 1.25rem var(--spacing-md);
-    font-size: 1rem;
-}
-
-.newsletter-form-large button {
-    padding: 1.25rem var(--spacing-xl);
-}
-
 .benefits-list li {
     padding: var(--spacing-md) 0;
     margin-bottom: 0;
@@ -533,11 +475,6 @@ body {
     opacity: 0.6;
     max-width: 600px;
     line-height: 1.8;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.final-cta .newsletter-form-large {
     margin-left: auto;
     margin-right: auto;
 }
@@ -638,16 +575,6 @@ body {
 
     .header-cta {
         font-size: 0.75rem;
-    }
-
-    .newsletter-form,
-    .newsletter-form-large {
-        flex-direction: column;
-    }
-
-    .newsletter-form input,
-    .newsletter-form-large input {
-        border-right: 1px solid var(--color-black);
     }
 
     .ingredients-grid {
@@ -789,14 +716,6 @@ main > section > .container {
 
 .story-image .image-placeholder {
     max-height: min(60dvh, 600px);
-}
-
-.newsletter-form input {
-    min-width: 0;
-}
-
-.newsletter-form-large button {
-    padding-inline: 2rem;
 }
 
 .footer {

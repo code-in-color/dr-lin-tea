@@ -1,36 +1,12 @@
 <script lang="ts">
-  import {onDestroy} from 'svelte';
-  import { siteUrl, socialImage } from '../lib/site';
-
-  let email = $state('');
-  let status = $state<'idle' | 'subscribing' | 'subscribed'>('idle');
-  let subscribeTimer: ReturnType<typeof setTimeout>;
-  let resetTimer: ReturnType<typeof setTimeout>;
-
-  // Preserve the existing demo until an email provider is connected.
-  function subscribe(event: SubmitEvent) {
-    event.preventDefault();
-    if (status !== 'idle') return;
-
-    status = 'subscribing';
-    subscribeTimer = setTimeout(() => {
-      status = 'subscribed';
-      email = '';
-      resetTimer = setTimeout(() => {
-        status = 'idle';
-      }, 3000);
-    }, 1000);
-  }
-
-  onDestroy(() => {
-    clearTimeout(subscribeTimer);
-    clearTimeout(resetTimer);
-  });
+  import {siteUrl, socialImage} from '../lib/site';
+  import NewsletterForm from '../lib/NewsletterForm.svelte';
 </script>
 
 <svelte:head>
     <title>Dr. Lin Tea - Sparkling Botanical Tea</title>
-    <meta name="description" content="Meet Ruby Fizz: a crisp sparkling tea with tart hibiscus, premium loose-leaf tea, and minimal ingredients.">
+    <meta name="description"
+          content="Meet Ruby Fizz: a crisp sparkling tea with tart hibiscus, premium loose-leaf tea, and minimal ingredients.">
     <link rel="canonical" href={siteUrl}>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dr. Lin Tea">
@@ -41,7 +17,8 @@
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dr. Lin Tea Ruby Fizz can with red hibiscus artwork on a warm white background">
+    <meta property="og:image:alt"
+          content="Dr. Lin Tea Ruby Fizz can with red hibiscus artwork on a warm white background">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ruby Fizz — Dr. Lin Tea">
     <meta name="twitter:description" content="Tart hibiscus. Real tea. A little sparkle. Meet Ruby Fizz.">
@@ -63,12 +40,12 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-copy">
-                    <p class="hero-subtitle">Sparkling Botanical Tea</p>
-                    <h1 class="hero-title">Ruby <span class="hero-title-accent">Fizz</span></h1>
-                    <p class="hero-description">
-                        Tart hibiscus and premium loose-leaf tea come together in a crisp sparkling tea
-                        with a naturally vibrant, fruit-forward character.
-                    </p>
+                        <p class="hero-subtitle">Sparkling Botanical Tea</p>
+                        <h1 class="hero-title">Ruby <span class="hero-title-accent">Fizz</span></h1>
+                        <p class="hero-description">
+                            Tart hibiscus and premium loose-leaf tea come together in a crisp sparkling tea
+                            with a naturally vibrant, fruit-forward character.
+                        </p>
                     </div>
                     <p class="hero-feature">
                         Made with minimal ingredients and sweetened with raw turbinado,
@@ -122,14 +99,7 @@
             <div class="final-cta-content">
                 <h2>Be the First to Try It</h2>
                 <p>Join our community and get notified when Hibiscus Fizz launches.</p>
-                <form class="newsletter-form newsletter-form-large" id="newsletterForm" onsubmit={subscribe}
-                      aria-busy={status === 'subscribing'}>
-                    <input type="email" name="email" aria-label="Email address" autocomplete="email"
-                           placeholder="your@email.com" bind:value={email} required>
-                    <button type="submit" disabled={status !== 'idle'} aria-live="polite">
-                        {status === 'subscribing' ? 'Subscribing...' : status === 'subscribed' ? 'Subscribed' : 'Get Launch Updates'}
-                    </button>
-                </form>
+                <NewsletterForm />
             </div>
         </div>
     </section>
