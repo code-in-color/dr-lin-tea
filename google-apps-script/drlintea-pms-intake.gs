@@ -56,8 +56,6 @@ function doPost(event) {
     if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
       || /[\u0000-\u001f\u007f]/.test(email)
       || firstName === null || firstName.length > 100 || /[\u0000-\u001f\u007f]/.test(firstName)
-      || !Array.isArray(interests) || interests.length > ALLOWED_INTERESTS.length
-      || interests.some(value => !ALLOWED_INTERESTS.includes(value))
       || input.website !== '') {
       return json_({ ok: false, code: 'INVALID_INPUT', requestId });
     }
