@@ -1,6 +1,8 @@
 <script lang="ts">
   import {siteUrl, socialImage} from '../lib/site';
   import NewsletterForm from '../lib/NewsletterForm.svelte';
+  import BotanicalBenefits from '../lib/BotanicalBenefits.svelte';
+  import SugarComparison from '../lib/SugarComparison.svelte';
 </script>
 
 <svelte:head>
@@ -25,6 +27,7 @@
     <meta name="twitter:image" content={socialImage}>
     <meta name="twitter:image:alt" content="Dr. Lin Tea Ruby Fizz sparkling tea can">
 </svelte:head>
+
 <header class="header">
     <div class="container">
         <div class="header-content">
@@ -94,11 +97,14 @@
         </div>
     </section>
 
+    <BotanicalBenefits />
+    <SugarComparison />
+
     <section class="final-cta" id="newsletter">
         <div class="container">
             <div class="final-cta-content">
                 <h2>Be the First to Try It</h2>
-                <p>Join our community and get notified when Hibiscus Fizz launches.</p>
+                <p>Sign up to our email list and get notified when Hibiscus Fizz launches.</p>
                 <NewsletterForm />
             </div>
         </div>
@@ -108,10 +114,6 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>Dr. Lin Tea</h4>
-                <p>Sparkling Botanical Tea</p>
-            </div>
             <div class="footer-section">
                 <h4>Product</h4>
                 <ul>
