@@ -20,11 +20,11 @@
                     complicate something so simple? Why not start with the best ingredients we can find and make
                     something that actually tastes good?
                 </p>
-                <p class="story-text">
-                    That's why we created Ruby Fizz. We brought together hibiscus, green tea, and blue lotus
-                    to create a sparkling tea steeped in centuries of botanical tradition. Real ingredients,
-                    thoughtfully selected, with nothing unnecessary added.
-                </p>
+<!--                <p class="story-text">-->
+<!--                    That's why we created Ruby Fizz. We brought together hibiscus, green tea, and blue lotus-->
+<!--                    to create a sparkling tea steeped in centuries of botanical tradition. Real ingredients,-->
+<!--                    thoughtfully selected, with nothing unnecessary added.-->
+<!--                </p>-->
                 <p class="story-text">
                     We believe people deserve better choices. Beverages made with care, not just a calculation of
                     how much profit can be extracted from every can. Good taste and thoughtful ingredients
