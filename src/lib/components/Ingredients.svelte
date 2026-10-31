@@ -13,7 +13,7 @@
     {
       name: 'Blue lotus',
       label: 'Whole flowers',
-      description: 'Revered in ancient Egypt, blue lotus adds a touch of floralness to elevate thoroughly modern drink.'
+      description: 'Revered in ancient Egypt, blue lotus adds a bit of floral je ne sais quoi to elevate our tea to a functional drink.'
     },
     {
       name: 'Turbinado',
