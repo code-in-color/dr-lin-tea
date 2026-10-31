@@ -5,7 +5,7 @@
     <div class="container">
         <div class="comparison-grid">
             <div>
-                <p class="hero-subtitle">Sweetened with organic raw turbinado.</p>
+                <p class="section-subtitle">Sweetened with organic raw turbinado</p>
                 <h2 class="section-title" id="sugar-title">
                     <span class="comparison-figure">Nearly 40%</span>
                     less sugar
@@ -17,7 +17,7 @@
                 <dl>
                     <div class="sugar-row ruby">
                         <dt>Ruby Fizz, 8 fl oz</dt>
-                        <dd>17 <span>g</span></dd>
+                        <dd>16 <span>g</span></dd>
                     </div>
                     <div class="sugar-row soda">
                         <dt>Popular soft-drink, 12 fl oz</dt>
@@ -93,7 +93,7 @@
     }
 
     .ruby::after {
-        width: calc(17 / 39 * 100%);
+        width: calc(16 / 39 * 100%);
         background: var(--color-red);
     }
 

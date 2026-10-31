@@ -41,7 +41,7 @@
 
 <section class="botanical-section" id="benefits" aria-labelledby="benefits-title">
     <div class="container">
-        <p class="hero-subtitle">Hibiscus / Green tea / Blue lotus</p>
+        <p class="section-subtitle">Beyond mere refreshment</p>
         <h2 class="section-title" id="benefits-title">Benefits</h2>
         <ul class="benefits-grid">
             {#each benefits as benefit}

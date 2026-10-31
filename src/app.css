@@ -179,7 +179,7 @@ body {
     margin: 0;
 }
 
-.hero-subtitle {
+.section-subtitle {
     color: var(--color-red);
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -799,7 +799,7 @@ main > section > .container {
         letter-spacing: 0.15px;
     }
 
-    .hero-subtitle,
+    .section-subtitle,
     .hero-title,
     .hero-description,
     .hero-feature {
