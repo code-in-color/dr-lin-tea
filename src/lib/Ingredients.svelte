@@ -37,11 +37,11 @@
     <div class="container">
         <p class="section-subtitle">Intentionally minimal</p>
         <h2 class="section-title" id="ingredients-title">Ingredients</h2>
-        <p class="ingredients-intro">
-            We brought together hibiscus, a proprietary blend of teas, and blue lotus to create Ruby Fizz,
-            a sparkling tea steeped in centuries of botanical tradition. Real ingredients, thoughtfully
-            selected, with nothing unnecessary added.
-        </p>
+<!--        <p class="ingredients-intro">-->
+<!--            We brought together hibiscus, a proprietary blend of teas, and blue lotus to create Ruby Fizz,-->
+<!--            a sparkling tea steeped in centuries of botanical tradition. Real ingredients, thoughtfully-->
+<!--            selected, with nothing unnecessary added.-->
+<!--        </p>-->
         <ol class="ingredient-list">
             {#each ingredients as ingredient, index}
                 <li>
