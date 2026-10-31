@@ -10,7 +10,7 @@
                     <span class="comparison-figure">Nearly 40%</span>
                     less sugar
                 </h2>
-                <p class="story-text">than traditional soft-drinks<span aria-hidden="true">*</span></p>
+                <p class="comparison-caption">than traditional soft-drinks<span aria-hidden="true">*</span></p>
             </div>
             <div class="sugar-amounts">
                 <p class="serving-size">Sugar per serving</p>
@@ -42,7 +42,15 @@
     }
 
     .section-title {
-        margin-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .comparison-caption {
+        margin: 0;
+        font-size: 0.9375rem;
+        font-weight: 300;
+        line-height: 1.4;
+        text-align: left;
     }
 
     .comparison-figure {
