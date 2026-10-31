@@ -1,6 +1,9 @@
 <script lang="ts">
   import {siteUrl, socialImage} from '../lib/site';
-  import NewsletterForm from '../lib/NewsletterForm.svelte';
+  import Newsletter from '../lib/Newsletter.svelte';
+  import BotanicalBenefits from '../lib/BotanicalBenefits.svelte';
+  import SugarComparison from '../lib/SugarComparison.svelte';
+  import WhyWeMadeThis from '../lib/WhyWeMadeThis.svelte';
 </script>
 
 <svelte:head>
@@ -25,6 +28,7 @@
     <meta name="twitter:image" content={socialImage}>
     <meta name="twitter:image:alt" content="Dr. Lin Tea Ruby Fizz sparkling tea can">
 </svelte:head>
+
 <header class="header">
     <div class="container">
         <div class="header-content">
@@ -40,7 +44,7 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <p class="hero-subtitle">Sparkling Botanical Tea</p>
+                        <p class="section-subtitle">Sparkling Tea</p>
                         <h1 class="hero-title">Ruby <span class="hero-title-accent">Fizz</span></h1>
                         <p class="hero-description">
                             Tart hibiscus and premium loose-leaf tea come together in a crisp sparkling tea
@@ -64,54 +68,15 @@
         </div>
     </section>
 
-    <section class="story-section" id="about">
-        <div class="container">
-            <div class="story-grid">
-                <div class="story-content">
-                    <h2 class="section-title">Why We Made This</h2>
-                    <p class="story-text">
-                        We wanted to create a drink that brought together centuries of botanical tradition with modern
-                        taste.
-                        Hibiscus Fizz isn't trying to be anything other than what it is: a thoughtfully crafted
-                        sparkling tea
-                        made from real ingredients you can recognize.
-                    </p>
-                    <p class="story-text">
-                        No artificial flavors. No lengthy ingredient lists. Just minimal ingredients that work together
-                        to create something genuinely refreshing.
-                    </p>
-                    <p class="story-text">
-                        We're building Dr. Lin Tea for people who care about what goes into their body,
-                        but don't want to sacrifice taste or enjoyment.
-                    </p>
-                </div>
-                <div class="story-image">
-                    <img class="image-placeholder" src="assets/tea.jpg"
-                         alt="Loose-leaf teas and dried botanicals in glass jars" width="1333" height="2000"
-                         loading="lazy" decoding="async">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta" id="newsletter">
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Be the First to Try It</h2>
-                <p>Join our community and get notified when Hibiscus Fizz launches.</p>
-                <NewsletterForm />
-            </div>
-        </div>
-    </section>
+    <WhyWeMadeThis />
+    <BotanicalBenefits />
+    <SugarComparison />
+    <Newsletter />
 </main>
 
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>Dr. Lin Tea</h4>
-                <p>Sparkling Botanical Tea</p>
-            </div>
             <div class="footer-section">
                 <h4>Product</h4>
                 <ul>
