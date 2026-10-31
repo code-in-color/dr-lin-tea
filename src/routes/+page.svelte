@@ -4,6 +4,7 @@
   import BotanicalBenefits from '../lib/BotanicalBenefits.svelte';
   import SugarComparison from '../lib/SugarComparison.svelte';
   import WhyWeMadeThis from '../lib/WhyWeMadeThis.svelte';
+  import Ingredients from '../lib/Ingredients.svelte';
 </script>
 
 <svelte:head>
@@ -47,7 +48,7 @@
                         <p class="section-subtitle">Sparkling Tea</p>
                         <h1 class="hero-title">Ruby <span class="hero-title-accent">Fizz</span></h1>
                         <p class="hero-description">
-                            Tart hibiscus and premium loose-leaf tea come together in a crisp sparkling tea
+                            Tart hibiscus and premium tea come together in a crisp sparkling tea
                             with a naturally vibrant, fruit-forward character.
                         </p>
                     </div>
@@ -69,6 +70,7 @@
     </section>
 
     <WhyWeMadeThis />
+    <Ingredients />
     <BotanicalBenefits />
     <SugarComparison />
     <Newsletter />
