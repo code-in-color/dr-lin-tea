@@ -1,11 +1,11 @@
 <script lang="ts">
-  import {siteUrl, socialImage} from '../lib/site';
-  import Newsletter from '../lib/Newsletter.svelte';
-  import BotanicalBenefits from '../lib/BotanicalBenefits.svelte';
-  import SugarComparison from '../lib/SugarComparison.svelte';
-  import WhyWeMadeThis from '../lib/WhyWeMadeThis.svelte';
-  import Ingredients from '../lib/Ingredients.svelte';
-  import Hero from '../lib/Hero.svelte';
+  import {siteUrl, socialImage} from '#lib/site.ts';
+  import Newsletter from '#lib/components/Newsletter.svelte';
+  import BotanicalBenefits from '#lib/components/BotanicalBenefits.svelte';
+  import SugarComparison from '#lib/components/SugarComparison.svelte';
+  import WhyWeMadeThis from '#lib/components/WhyWeMadeThis.svelte';
+  import Ingredients from '#lib/components/Ingredients.svelte';
+  import Hero from '#lib/components/Hero.svelte';
 </script>
 
 <svelte:head>

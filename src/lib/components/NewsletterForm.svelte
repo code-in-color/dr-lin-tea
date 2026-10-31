@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {CONSENT_TEXT, DEFAULT_INTAKE_ENDPOINT, submitIntake} from './intake';
+  import {CONSENT_TEXT, DEFAULT_INTAKE_ENDPOINT, submitIntake} from '../intake';
 
   let email = $state('');
   let firstName = $state('');
