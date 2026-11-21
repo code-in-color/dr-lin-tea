@@ -68,7 +68,7 @@ function doPost(event) {
       const sheet = getIntakeSheet_();
       const lastRow = sheet.getLastRow();
       // A retry after a lost response must not append the same submission twice.
-      const duplicate = lastRow > 1 && sheet.getRange(2, 8, lastRow - 1, 1)
+      const duplicate = lastRow > 1 && sheet.getRange(2, 7, lastRow - 1, 1)
         .createTextFinder(requestId).matchEntireCell(true).findNext();
       if (!duplicate) {
         sheet.appendRow([
