@@ -1,6 +1,11 @@
 import { defineEnvVars } from '@sveltejs/kit/env';
 
 export const variables = defineEnvVars({
+    VITE_GOOGLE_SCRIPT_URL: {
+        public: true,
+        static: true,
+        schema: (value) => value?.trim() || ''
+    },
     PUBLIC_GA_MEASUREMENT_ID: {
         public: true,
         static: true,

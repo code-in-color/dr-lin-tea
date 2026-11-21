@@ -10,7 +10,6 @@
   let website = $state('');
   let confirmedName = $state('');
   let lastSubmission = {fingerprint: '', requestId: ''};
-  let intakeInput = DEFAULT_INTAKE_ENDPOINT || ''
 
   function editIntake() {
     submitted = false;
@@ -44,7 +43,7 @@
   }
 </script>
 
-{#if !intakeInput}
+{#if !DEFAULT_INTAKE_ENDPOINT}
     <p class="form-notice">Signups are temporarily unavailable. Please check back soon.</p>
 {/if}
 <noscript><p class="form-notice">Please enable JavaScript to submit this form.</p></noscript>
@@ -62,7 +61,7 @@
     <div class="honeypot" aria-hidden="true" inert>
         <label>Website <input type="text" name="website" autocomplete="off" tabindex="-1" bind:value={website}></label>
     </div>
-    <button type="submit" disabled={submitting || submitted}>
+    <button type="submit" disabled={!DEFAULT_INTAKE_ENDPOINT || submitting || submitted}>
         {submitting ? 'Subscribing...' : submitted ? 'Subscribed' : 'Get Launch Updates'}
     </button>
     {#if formError}
@@ -104,8 +103,8 @@
     }
 
     input:not([type="checkbox"]):focus {
-        outline: none;
-        border-color: var(--color-black);
+        outline: 2px solid var(--color-red);
+        outline-offset: 3px;
     }
 
     .consent {
@@ -119,10 +118,6 @@
     .consent input {
         flex: none;
         accent-color: var(--color-black);
-    }
-
-    .honeypot {
-        display: none;
     }
 
     button {

@@ -1,6 +1,8 @@
+import { VITE_GOOGLE_SCRIPT_URL } from '$app/env/public';
+
 export const CONSENT_VERSION = '2026-10-28';
 export const CONSENT_TEXT = 'Email me Dr. Lin Tea product updates. I can unsubscribe at any time.';
-export const DEFAULT_INTAKE_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyH-1QRpJ1JKyPfHIwqzVcPGSkdGtRypIFB9UAlJDkj583SDjrZ9RELWvDcHWKqZdPw/exec'
+export const DEFAULT_INTAKE_ENDPOINT = VITE_GOOGLE_SCRIPT_URL;
 
 export interface IntakeSubmission {
   requestId: string;
