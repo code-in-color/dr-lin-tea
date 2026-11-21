@@ -36,6 +36,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Check Svelte and TypeScript
         run: pnpm check
+      - name: Test signup retries
+        run: node --test tests/intake.test.mjs
       - name: Build static site
         run: pnpm build
         env:

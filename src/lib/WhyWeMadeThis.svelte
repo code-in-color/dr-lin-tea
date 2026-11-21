@@ -21,7 +21,7 @@
                     something that actually tastes good?
                 </p>
 <!--                <p class="story-text">-->
-<!--                    That's why we created Ruby Fizz. We brought together hibiscus, green tea, and blue lotus-->
+<!--                    That's why we created Ruby Tea. We brought together hibiscus, green tea, and blue lotus-->
 <!--                    to create a sparkling tea steeped in centuries of botanical tradition. Real ingredients,-->
 <!--                    thoughtfully selected, with nothing unnecessary added.-->
 <!--                </p>-->

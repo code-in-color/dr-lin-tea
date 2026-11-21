@@ -6,7 +6,7 @@
     <div class="container">
         <div class="final-cta-content">
             <h2>Stay Ahead of the Launch</h2>
-            <p>Sign up to get notified when Ruby Fizz launches.</p>
+            <p>Sign up to get notified when Ruby Tea launches.</p>
             <NewsletterForm />
         </div>
     </div>

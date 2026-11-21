@@ -16,7 +16,7 @@
                 <p class="serving-size">Sugar per serving</p>
                 <dl>
                     <div class="sugar-row ruby">
-                        <dt>Ruby Fizz, 8 fl oz</dt>
+                        <dt>Ruby Tea, 8 fl oz</dt>
                         <dd>16 <span>g</span></dd>
                     </div>
                     <div class="sugar-row soda">
