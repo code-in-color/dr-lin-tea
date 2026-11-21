@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Ruby Tea — Dr. Lin Tea">
     <meta name="twitter:description" content="Tart hibiscus. Real tea. A little sparkle. Meet Ruby Tea.">
     <meta name="twitter:image" content={socialImage}>
-    <meta name="twitter:image:alt" content="Dr. Lin Tea Ruby Tea sparkling tea can">
+    <meta name="twitter:image:alt" content="A can of Dr. Lin Ruby Sparkling Tea">
 </svelte:head>
 
 <header class="header">
@@ -45,7 +45,7 @@
                 <div class="hero-content">
                     <div class="hero-copy">
                         <p class="section-subtitle">Sparkling Tea</p>
-                        <h1 class="hero-title">Ruby <span class="hero-title-accent">Fizz</span></h1>
+                        <h1 class="hero-title"><span class="hero-title-accent">Ruby</span> Tea</h1>
                         <p class="hero-description">
                             Tart hibiscus and premium loose-leaf tea come together in a crisp sparkling tea
                             with a naturally vibrant, fruit-forward character.

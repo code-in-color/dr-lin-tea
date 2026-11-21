@@ -1,5 +1,5 @@
 :root {
-    --color-black: #000;
+    --color-black: #130101;
     --color-white: #fff;
     --color-red: #c33;
     --color-gray: #999;
@@ -59,7 +59,7 @@ body {
 .logo {
     font-size: 0.875rem;
     font-weight: 400;
-    color: var(--color-red);
+    color: var(--color-black);
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
