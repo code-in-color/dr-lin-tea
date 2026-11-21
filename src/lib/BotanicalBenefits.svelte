@@ -44,7 +44,7 @@
         <p class="section-subtitle">Beyond mere refreshment</p>
         <h2 class="section-title" id="benefits-title">Benefits</h2>
         <ul class="benefits-grid">
-            {#each benefits as benefit}
+            {#each benefits as benefit (benefit.icon)}
                 <li>
                     <span class="benefit-icon" aria-hidden="true"
                           style:mask-image={`url('assets/benefits/${benefit.icon}.svg')`}></span>
@@ -111,13 +111,6 @@
     .benefit-description {
         color: var(--color-gray);
         font-size: 0.875rem;
-        line-height: 1.8;
-    }
-
-    .research-note {
-        margin-top: var(--spacing-md);
-        color: var(--color-gray);
-        font-size: 0.75rem;
         line-height: 1.8;
     }
 
